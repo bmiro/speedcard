@@ -73,7 +73,7 @@ function dispatcher_choose($url) {
   }
 
   foreach ($dispatcher_conf as $regexp => $controller) {
-    if (preg_match($regexp, strtolower($url), $matches)) {
+    if (preg_match($regexp, $url, $matches)) {
       return array($controller, $matches);
     }
   }
