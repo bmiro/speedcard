@@ -30,4 +30,9 @@ $path_theme = '';
 //
 // );
 
+// // Localization
+// $valid_langs = array(
+//
+// );
+
 require 'settings_extra.php';

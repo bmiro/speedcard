@@ -3,7 +3,7 @@
 define('NL', "\n");
 
 /**
- * Bootstrap dependencies in core.
+ * 'core' bootstrap.
  */
 include 'core/misc.inc.php';
 include 'core/theme.class.php';
@@ -30,6 +30,11 @@ require 'sites/common/settings.php';
 require 'sites/' . DOMAIN . '/settings.php';
 
 /**
+ * 'core' bootstrap that with settings dependency.
+ */
+include 'core/locale.inc.php';
+
+/**
  * Process settings.
  */
 if (!isset($path_app) || $path_app == '') {
@@ -49,9 +54,6 @@ if (isset($db_name) && $db_name != '') {
 if (isset($memcache_servers) && is_array($memcache_servers)) {
   include 'extra/mem.inc.php';
 }
-// if (isset($valid_langs) && is_array($valid_langs)) {
-//   include 'extra/locale.inc.php';
-// }
 
 /**
  * Selects the controller to use based on the $url.
