@@ -24,7 +24,7 @@
 include 'core/bootstrap.inc.php';
 
 $json = FALSE;
-$url  = rtrim($_GET['q'], '/');
+$url  = $_GET['q'];
 
 if ($devel) {
   // Debugging.
