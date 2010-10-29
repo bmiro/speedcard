@@ -1,7 +1,9 @@
 <?php
 
 /**
- * Init memcache object and connection.
+ * Init memcached object and connection.
+ *
+ * Support for 'Memcache' (and not 'Memcached') in comments.
  */
 function mem_init() {
   global $memcache;
