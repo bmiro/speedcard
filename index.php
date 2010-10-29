@@ -38,12 +38,19 @@ if ($devel) {
 }
 
 // Call the controller.
-if (list($controller, $args) = dispatcher_choose($url)) {
+list($controller, $args) = dispatcher_choose($url);
+if ($controller !== NULL) {
   include $path_app . '/' . $controller;
   $t_app_start = microtime(TRUE);
 
   $controller_output = controller($args);
-  print $controller_output;
+
+  if ($controller_output !== FALSE) {
+    print $controller_output;
+  }
+  else {
+    print page_not_found($url);
+  }
 }
 else {
   $t_app_start = microtime(TRUE);
