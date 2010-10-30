@@ -133,24 +133,24 @@ function goto_url($path = '', $http_response_code = 302) {
  * Write a message in a log file in the default $path_log.
  */
 function logger($message, $file) {
-  global $path_log;
-
-  if (!is_dir($path_log)) {
-    // Be sure log path is ready.
-    if (!mkdir($path_log, 0600, TRUE)) {
-      return FALSE;
-    }
-  }
-
-  $now       = time();
-  $now_human = date('Y/m/d H:i:s', $now);
-  $message   = "$now - $now_human - $message";
-  $message   = str_replace(array("\n", "\r"), ' ', $message);
-
-  if ($fp = fopen($path_log . '/' . $file, 'a')) {
-    fwrite($fp, $message."\n");
-    fclose($fp);
-  }
+//  global $path_log;
+//
+//  if (!is_dir($path_log)) {
+//    // Be sure log path is ready.
+//    if (!mkdir($path_log, 0600, TRUE)) {
+//      return FALSE;
+//    }
+//  }
+//
+//  $now       = time();
+//  $now_human = date('Y/m/d H:i:s', $now);
+//  $message   = "$now - $now_human - $message";
+//  $message   = str_replace(array("\n", "\r"), ' ', $message);
+//
+//  if ($fp = fopen($path_log . '/' . $file, 'a')) {
+//    fwrite($fp, $message."\n");
+//    fclose($fp);
+//  }
 }
 
 /**
