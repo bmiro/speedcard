@@ -24,7 +24,7 @@
 include 'core/bootstrap.inc.php';
 
 $json = FALSE;
-$url  = $_GET['q'];
+$url  = (isset($_GET['q']) ? $_GET['q'] : '');
 
 if ($devel) {
   // Debugging.
@@ -61,7 +61,7 @@ else {
 if ($devel && $json === FALSE) {
   $t_end = microtime(TRUE);
   $t_app = (int)(round($t_app_start - $t_start, 4)*10000);
-  $t_tpl = (($t_tpl !== NULL) ? ((int)(round($t_tpl_start - $t_start, 4)*10000)) : 0);
+  $t_tpl = ((isset($t_tpl) && $t_tpl !== NULL) ? ((int)(round($t_tpl_start - $t_start, 4)*10000)) : 0);
   $t_all = (int)(round($t_end - $t_start, 4)*10000);
   $t_qry = (int)(round($t_query, 4)*10000);
   $t_mem = (int)(round($t_mem, 4)*10000);
