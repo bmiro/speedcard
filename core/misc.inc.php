@@ -50,7 +50,6 @@ function send_mail($from, $to, $subject, $message, $bcc = NULL, $reply_to = NULL
   $headers  = "From: $from\r\n";
   $headers .= ($bcc ? 'Bcc: ' .$bcc. "\r\n" : '');
   $headers .= ($reply_to ? 'Reply-To: '.$reply_to . "\r\n" : '');
-  $headers .= "X-Mailer: motogp.com\r\n";
 
   if ($html) {
     $headers .= "MIME-Version: 1.0\r\n";
@@ -62,7 +61,7 @@ function send_mail($from, $to, $subject, $message, $bcc = NULL, $reply_to = NULL
   }
   $headers .= $extra_headers;
 
-  $ret = mail($to, $subject, $message, $headers);
+  $result = mail($to, $subject, $message, $headers);
 
   if (isset($base_url) && $base_url != '' && $log == TRUE && $db) {
     $from    = $db->cleanString($from);
@@ -84,34 +83,9 @@ function send_mail($from, $to, $subject, $message, $bcc = NULL, $reply_to = NULL
     if ($extra_headers != '' && $db) {
       $extra_headers = $db->cleanString($extra_headers);
     }
-
-    $backtrace = '';
-    if ($ret === FALSE) {
-      $backtrace = str_replace("'","\'",pr2(debug_backtrace(),TRUE));
-    }
-
-    $sql  = 'INSERT INTO send_mail_log (date,m_from,m_to,result,body,bcc,reply_to,html';
-    $sql .= ",extra_headers,subject,backtrace) VALUES (NOW(),'$from','$to','$ret','$message','";
-    $sql .= ($bcc ? $bcc : '');
-    $sql .= '\',\'';
-    $sql .= ($reply_to ? $reply_to : '');
-    $sql .= '\',\'';
-    $sql .= ($html ? 'TRUE' : 'FALSE');
-    $sql .= "','$extra_headers','$subject','$backtrace')";
-    $db->master($sql);
   }
 
-  $clean_subject = str_replace("\n", ' ', $subject);
-
-  if ($ret === TRUE) {
-    $result = 'TRUE';
-  }
-  else {
-    $result = 'FALSE';
-  }
-  $log_line = date('d/m/Y H:i:s') .' - '. $result .' - '. $from .' - '. $to .' - '. $clean_subject ."\n";
-  file_put_contents('/tmp/send_mail.log', $log_line, FILE_APPEND);
-  return $ret;
+  return $result;
 }
 
 /**
