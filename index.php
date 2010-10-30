@@ -67,7 +67,7 @@ if ($devel && $json === FALSE) {
   $t_mem = (int)(round($t_mem, 4)*10000);
 
   print "\n<!-- $site_name (";
-  print 'db '. $db->count ."q = ${t_qry}s ; ";   // Database:  Number of queries and time used.
+  print (isset($db) ? 'db '. $db->count ."q = ${t_qry}s ; " : ''); // Database: Number of queries and time used.
   print "mc {$mem_h}h+{$mem_m}m = ${t_mem}s ; "; // memcached: Hits, misses and time used.
   print 'loves caching @ ' . date('Y/m/d H:i:s') . 'GMT -->';
 }
