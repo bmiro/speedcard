@@ -14,6 +14,9 @@ To install the Lemur Framework follow these instructions:
   3. To test your enviroment you can copy code from the 'examples' folder
      to the 'app', 'class' and 'theme' folders.
 
+You can download some examples from the 'contrib' repository:
+http://github.com/lemurframework/contrib
+
 #############################################################################
 
 Installation is done. You can also:
