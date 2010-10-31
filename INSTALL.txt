@@ -11,11 +11,9 @@ To install the Lemur Framework follow these instructions:
      file 'sites/common/settings.php' to this folder. Edit the file, read
      the comments and configure your installation as needed.
 
-  3. To test your enviroment you can copy code from the 'examples' folder
-     to the 'app', 'class' and 'theme' folders.
-
-You can download some examples from the 'contrib' repository:
-http://github.com/lemurframework/contrib
+  3. To test your enviroment you can copy code from the 'contrib' repository to
+     the 'app', 'class' and 'theme' folders. The 'contrib' repository is hosted
+     on http://github.com/lemurframework/contrib
 
 #############################################################################
 
