@@ -266,15 +266,14 @@ class Form {
         }
 
         $output .= '<button class="'.$button_class.'" name="op" id="'. $field .'" type="submit" onclick="'.$options['onclick'].'"';
-
         if ($options['accesskey'] != '') {
           $output .= 'accesskey ="'.$options['accesskey'].'"';
         }
-
         $output .= '>';
         $output .= '<span>'.$options['title'].'</span></button>';
         $output .= $options['desc'] ? '<p class="description '.$options['style'].'" >'.$options['desc'].'</p>'.NL : '';
         break;
+
       case 'button':
         $output .= '<button type="button" class="btn" id="'.$field.'" onclick="'.$options['onclick'].'" ';
         if ($options['accesskey'] != '') {
@@ -287,6 +286,7 @@ class Form {
       default:
         break;
     }
+
     if ($options['post']) {
       $output .= $options['post'].NL;
     }

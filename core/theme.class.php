@@ -92,21 +92,21 @@ class Template {
         }
 
         // 'varn' TTL for varnish.
-	if ($this->ttl['varn'] == 'nostore') {
+        if ($this->ttl['varn'] == 'nostore') {
           // FIXME: nostore and 0s is not the same!.
-	  header('Primary-Control: 0s');
-	}
-	else {
-	  header('Primary-Control: '. $this->ttl['varn']);
-	}
+          header('Primary-Control: 0s');
+        }
+        else {
+          header('Primary-Control: '. $this->ttl['varn']);
+        }
 
         // 'edge' TTL for Akamai Edge servers.
-	if ($this->ttl['edge'] == 'nostore') {
+        if ($this->ttl['edge'] == 'nostore') {
           header('Edge-Control: max-age=0,no-cache,no-store');
-	}
-	else {
+        }
+        else {
           header('Edge-Control: cache-maxage=' . $this->ttl['edge']);
-	}
+        }
       }
     }
 
