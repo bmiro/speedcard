@@ -204,7 +204,7 @@ class Template {
      global $path_theme;
 
      if ($this->tplpath != '') {
-       return $tplpath;
+       return $this->tplpath;
      }
      if (isset($path_theme) && $path_theme != '') {
        return $path_theme;
