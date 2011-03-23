@@ -34,7 +34,7 @@ class Database {
     }
 
     // If needed, connect to database.
-    if (!$this->{$type.'_handler'}) {
+    if (empty($this->{$type.'_handler'})) {
       if ($type == 'master') {
          global $db_host_master;
         $host = $db_host_master;
@@ -108,7 +108,7 @@ class Database {
         mysqli_close($this->slave_handler);
       }
     }
-    else if ($this->{$type.'_handler'} !== NULL) {
+    else if (isset($this->{$type.'_handler'}) && $this->{$type.'_handler'} !== NULL) {
       mysqli_close($this->{$type.'_handler'});
     }
   }
