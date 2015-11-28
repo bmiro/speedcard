@@ -1,0 +1,36 @@
+#############################################################################
+# Lemur Framework: INSTALL.txt ##############################################
+#############################################################################
+
+To install the Lemur Framework follow these instructions:
+
+  1. Make sure the file .htaccess is being used.
+
+  2. Create a folder in 'sites' with your domain name. For example, if your
+     domain is example.com, create the folder 'sites/example.com'. Copy the
+     file 'sites/common/settings.php' to this folder. Edit the file, read
+     the comments and configure your installation as needed.
+
+  3. To test your enviroment you can copy code from the 'contrib' repository to
+     the 'app', 'class' and 'theme' folders. The 'contrib' repository is hosted
+     on http://github.com/lemurframework/contrib
+
+#############################################################################
+
+Installation is done. You can also:
+
+  - Read the developers guide on how to begin:
+    http://lemurframework.com/doc/developers-guide/
+
+  - Subscribe to notifications for news and security alerts:
+    http://lemurframework.com/notifications/
+
+#############################################################################
+
+Please, report bugs using these instructions:
+http://lemurframework.com/contribute/reportbug/
+
+And do not hesitate to send your patches:
+http://lemurframework.com/contribute/sendpatch/
+
+#############################################################################
