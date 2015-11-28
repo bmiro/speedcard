@@ -1,0 +1,15 @@
+.diamonds, .hearts {
+    color: red;
+}
+
+.card-icon {
+    font-size: 10em;
+}
+
+.card-name:first-letter {
+    text-transform: capitalize;
+}
+
+.speedcard {
+    text-align: center;
+}
