@@ -9,7 +9,11 @@
 
 .card-icon {
     font-family: embellishedCard;
-    font-size: 10em;
+    font-size: 12em;
+    /* With this magically the spacing is corret and not taken font-size
+     * as reference
+     */
+    line-height: 100%;
 }
 
 .card-name:first-letter {
