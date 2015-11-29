@@ -10,6 +10,7 @@
     <!-- Bootstrap -->
     <link href="/static/css/bootstrap.min.css" rel="stylesheet">
     <link href="/static/css/speedcard.css" rel="stylesheet">
+    <link href="/static/css/speedcard-navbar.css" rel="stylesheet">
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -19,7 +20,39 @@
     <![endif]-->
   </head>
   <body>
+    
+    <div class="navbar navbar-default navbar-inverse" role="navigation">   
+      <div class="container">
+        <div class="navbar-header pull-left">
+          <div class="navbar-brand">
+            <img alt="&#x1F0AB; Speed Card" src='todo-logo.svg' height=25px>
+          </div>
+        </div>
+        <!--
+        <div class="navbar-header pull-right">
+          <ul class="nav navbar-nav">
+            <li>
+              <a href="#">
+                anonymous
+                <i class="fa fa-sign-out"></i>
+              </a>
+            </li>
+          </ul>
+        </div>
+        -->
+      </div>
+    </div>
+
+
     <?php print $main; ?>
+
+    <footer class="footer text-center">
+      <div class="container">
+        <p>
+          Cartomagic practice cybertools.
+        </p>
+      </div>
+    </footer>
 
     <script type="text/javascript" src="/static/js/jquery.min.js"></script>
     <script type="text/javascript" src="/static/js/bootstrap.min.js"></script>
