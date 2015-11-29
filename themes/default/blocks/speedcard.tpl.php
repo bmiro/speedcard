@@ -2,16 +2,24 @@
   <div class="speedcard">
     <div class="row">
       <div class="col-xs-12">
-        <div class="card-icon <?php print $card_suit?>">
-          <?php
-            print "$card_icon";
-          ?>
+        <div class="row">
+          <div class="col-xs-12">
+            <div class="card-icon <?php print $card_suit?>">
+              <?php
+                print "$card_icon";
+              ?>
+            </div>
+          </div>
         </div>
-        <p class="lead card-name <?php print $card_suit?>">
-          <?php
-            print "$card_name";
-          ?>
-        </p>
+        <div class="row">
+          <div class="col-xs-12">
+            <p class="lead card-name <?php print $card_suit?>">
+              <?php
+                print "$card_name";
+              ?>
+            </p>
+          </div>
+        </div>
       </div>
     </div>
     <div class="row">
