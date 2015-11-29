@@ -12,7 +12,7 @@ $devel = FALSE;
 
 // Transform URLs in controllers.
 $dispatcher_conf = array(
-  '@^$@'         => 'speedcard.php',
+    '@^/?$@'         => 'speedcard.php',
 );
 
 // // Where to put logs.
