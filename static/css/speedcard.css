@@ -1,5 +1,5 @@
 @font-face {
-    font-family: Symbola;
+    font-family: embellishedCard;
     src: url("/static/fonts/Symbola.ttf");
 }
 
@@ -8,7 +8,7 @@
 }
 
 .card-icon {
-    font-family: Symbola;
+    font-family: embellishedCard;
     font-size: 10em;
 }
 
