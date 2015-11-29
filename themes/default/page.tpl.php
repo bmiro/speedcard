@@ -25,7 +25,8 @@
       <div class="container">
         <div class="navbar-header pull-left">
           <div class="navbar-brand">
-            <img alt="&#x1F0AB; Speed Card" src='todo-logo.svg' height=25px>
+            <p>&#x1F0AB; Speed Card</p>
+            <!-- <img alt="&#x1F0AB; Speed Card" src='' height=25px> -->
           </div>
         </div>
         <!--
