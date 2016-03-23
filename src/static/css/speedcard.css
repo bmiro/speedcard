@@ -1,0 +1,44 @@
+@font-face {
+    font-family: embellishedCard;
+    src: url("/static/fonts/Symbola.ttf");
+}
+
+.diamonds, .hearts {
+    color: #d9534f;
+}
+
+.card-icon {
+    font-family: embellishedCard;
+    font-size: 12em;
+    /* With this magically the spacing is corret and not taken font-size
+     * as reference
+     */
+    line-height: 100%;
+}
+
+.card-name:first-letter {
+    text-transform: capitalize;
+}
+
+.speedcard {
+    text-align: center;
+}
+
+body {
+  /* Margin bottom by footer height */
+  margin-bottom: 60px;
+}
+
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  /* Set the fixed height of the footer here */
+  color:  #eee;
+  background-color: #333333;
+}
+
+.footer > .container > p {
+  margin: 5px 5px;
+}
+
