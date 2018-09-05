@@ -1,7 +1,7 @@
 <?php
 
 // The URL of this installation.
-$base_url  = 'http://speedcard.gotes.org';
+$base_url  = 'https://speedcard.rtom.eu';
 
 // The human name.
 $site_name = 'Speed Card';
